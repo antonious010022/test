@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الملوك في مصر القديمة</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    .custom-cursor {
+      width: 15px;
+      height: 15px;
+      background-color: #ffffff;
+      border: 1px solid #b16332(0, 0, 0, 0.637);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: transform 0.4s ease, background-color 0.4s ease;
+      z-index: 9999;
+      box-shadow: 0 0 0 0.2px #b16332;
+      cursor: none;
+    }
+  
+    .custom-cursor.link-hover {
+      background-color: rgba(179, 99, 48, 0.2);
+      transform: scale(4);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      cursor: none;
+    } 
+
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2f4f4f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+h2 {
+    color: #2f4f4f;
+}
+
+.king {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.king img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #2f4f4f;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+</style>
+<body>
+    <header>
+        <h1>الملوك في مصر القديمة</h1>
+        <p>تعرف على بعض الملوك المشهورين في تاريخ مصر القديمة.</p>
+    </header>
+    
+    <section class="king">
+        <h2>الملك توت عنخ آمون</h2>
+        <img src="tutankhamun.jpg" alt="الملك توت عنخ آمون">
+        <p>الملك توت عنخ آمون هو واحد من أشهر ملوك مصر القديمة، وهو معروف بقبريه الذي اكتشفه هوارد كارتر في عام 1922.</p>
+    </section>
+
+    <section class="king">
+        <h2>الملكة حتشبسوت</h2>
+        <img src="hatshepsut.jpg" alt="الملكة حتشبسوت">
+        <p>الملكة حتشبسوت كانت واحدة من أقوى النساء في تاريخ مصر القديمة، وكانت فرعون مصر لمدة طويلة.</p>
+    </section>
+
+    <footer>
+        <p>موقع: <a href="index.html" target="_blank">الصفحة الرئيسية</a></p>
+    </footer>
+</body>
+
+<script>
+    const cursor = document.getElementById('cursor');
+    const links = document.querySelectorAll('header a, nav a, footer a, body a');  /* تعديل هنا لاستهداف روابط الـ header */
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.pageX + 'px';
+      cursor.style.top = e.pageY + 'px';
+    });
+
+    links.forEach(link => {
+      link.addEventListener('mouseenter', () => {
+        cursor.classList.add('link-hover');
+      });
+      link.addEventListener('mouseleave', () => {
+        cursor.classList.remove('link-hover');
+      });
+    });
+  </script>
+
+  </html>

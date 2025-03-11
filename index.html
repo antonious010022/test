@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>معالم التاريخ المصري</title>
+  <style>
+    html, body {
+      height: 100%; /* تأكد من أن html و body يغطيان كامل الشاشة */
+      margin: 0;
+      padding: 0;
+    }
+  
+    body {
+      font-family: 'Scheherazade', serif;
+      background-image: url('egy.webp'); /* هنا حط المسار الخاص بالصورة */
+      background-size: cover; /* لجعل الصورة تغطي كامل الصفحة */
+      background-position: center; /* لجعل الصورة في وسط الصفحة */
+      background-attachment: fixed; /* لجعل الخلفية ثابتة عند التمرير */
+      background-repeat: no-repeat; /* لمنع تكرار الصورة */
+      color: black;
+      background-color: rgba(0, 0, 0, 0.0);
+      cursor: none;
+    }
+  
+    header {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      width: 80%; /* تحديد عرض الـ header */
+      height: auto;
+      background-color: transparent;
+      display: flex;
+      flex-direction: row; /* جعل العناصر تظهر أفقيًا */
+      justify-content: center;
+      align-items: center; /* لتوسيط العناصر أفقيًا وعموديًا */
+      padding-top: 20px;
+      z-index: 100;
+      transform: translate(-50%, -50%);
+      cursor: none;
+      text-align: center;
+      margin: 20px 0;
+      text-decoration: none;
+    }
+  
+    .image-link {
+      margin: 0 12px; /* المسافة بين الروابط */
+      text-decoration: none;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column; /* ترتيب المحتوى داخل الرابط عمودي */
+      align-items: center; /* لتوسيط الصورة والنص */
+    }
+    .image-link span {
+  font-size: 24px; /* اختر الحجم الذي تريده */
+  font-weight: bold; /* اختياري: لجعل النص أكثر وضوحًا */
+  color: white; /* إذا كنت تريد تغيير لون النص */
+  font-family: 'HS HEADIINE Franklin', 'Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+    header a {
+      color: white;
+      text-decoration: none;
+      margin: 15px 0;
+      padding: 10px;
+      text-align: center;
+      font-size: 18px;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 20px;
+      transition: background-color 1.0s;
+      cursor: none; /* إخفاء المؤشر على الروابط */
+    }
+  
+    header a:hover {
+      background-color: transparent;
+      transform: scale(1.1);
+      cursor: none;
+    }
+  
+    header a img {
+      display: block;
+      width: 110%; /* جعل الصورة تحتل عرض الإطار */
+      height: auto; /* الحفاظ على نسب الصورة */
+      object-fit: cover; /* ملء الإطار مع الحفاظ على نسب الصورة */
+      transition: opacity 3.2s ease; /* تأثير التلاشي */
+      border: none;
+      height: 350px; /* زيادة حجم الصورة */
+    }
+  
+    header a img:hover {
+      opacity: 0; /* التلاشي عند مرور الماوس */
+    }
+  
+    section {
+      padding: 20px;
+      text-align: center;
+    }
+  
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, 0.0); /* شفافية في الخلفية */
+      color: rgb(255, 255, 255);
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+      cursor: none;
+    }
+  
+    .content {
+      padding: 15px;
+      background-color: transparent;
+      border-radius: 8px;
+      color: white;
+      cursor: none;
+    }
+  
+    .custom-cursor {
+      width: 15px;
+      height: 15px;
+      background-color: #ffffff;
+      border: 1px solid #b16332(0, 0, 0, 0.637);
+      border-radius: 50%;
+      position: fixed;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: transform 0.4s ease, background-color 0.4s ease;
+      z-index: 9999;
+      box-shadow: 0 0 0 0.2px #b16332;
+      cursor: none;
+    }
+  
+    .custom-cursor.link-hover {
+      background-color: rgba(179, 99, 48, 0.2);
+      transform: scale(4);
+      box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      cursor: none;
+    }
+  </style>
+  
+</head>
+<body>
+
+  <header>
+    <a href="#history" class="image-link">
+      <div class="image-wrapper">
+        <img src="hist (1).png" alt="برديات">
+      </div>
+      <span>برديات</span>
+    </a>
+    <a href="KING.HTML" class="image-link">
+      <div class="image-wrapper">
+        <img src="تصميم بدون عنوان (1).png" alt="اشهر الملوك والحكام">
+      </div>
+      <span>اشهر الملوك والحكام</span>
+    </a>
+    <a href="#monuments" class="image-link">
+      <div class="image-wrapper">
+        <img src= "اثار.png" alt="الآثار">
+      </div>
+      <span>الآثار</span>
+    </a>
+  </header>
+  
+
+
+
+
+  <footer>
+    <p id="para1">حقوق الطبع والنشر © 2025 كنوز التاريخ المصري</p>
+  </footer>
+
+  <div class="custom-cursor" id="cursor"></div>
+
+  <script>
+    const cursor = document.getElementById('cursor');
+    const links = document.querySelectorAll('header a, nav a, footer a, body a');  /* تعديل هنا لاستهداف روابط الـ header */
+
+    document.addEventListener('mousemove', (e) => {
+      cursor.style.left = e.pageX + 'px';
+      cursor.style.top = e.pageY + 'px';
+    });
+
+    links.forEach(link => {
+      link.addEventListener('mouseenter', () => {
+        cursor.classList.add('link-hover');
+      });
+      link.addEventListener('mouseleave', () => {
+        cursor.classList.remove('link-hover');
+      });
+    });
+  </script>
+</body>
+</html>

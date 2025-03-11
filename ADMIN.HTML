@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>معالم التاريخ المصري</title>
+  <style>
+    body {
+      font-family: 'Scheherazade', serif;
+      background-color: #f0f0f0;
+    }
+    .admin-login {
+      margin: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="admin-login">
+    <button onclick="goToLogin()">تسجيل الدخول كأدمن</button>
+    
+  </div>
+
+  <script>
+    // إرسال المستخدم إلى صفحة تسجيل الدخول
+    function goToLogin() {
+      window.location.href = "index.html"; // التوجيه إلى صفحة admin.html
+    }
+    function loginAsAdmin() {
+      const password = document.getElementById("adminPassword").value;
+      if (password === "JPJ@13KR") { // كلمة المرور الصحيحة
+        // تخزين حالة تسجيل الدخول في localStorage
+        localStorage.setItem("isAdmin", "true");
+        // التوجيه إلى الصفحة الرئيسية بعد تسجيل الدخول
+        window.location.href = "index.html"; // العودة إلى الصفحة الرئيسية
+      } else {
+        alert("كلمة مرور خاطئة!");
+      }
+    }
+  </script>
+  </script>
+
+</body>
+</html>
